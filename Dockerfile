@@ -5,7 +5,7 @@ FROM openjdk
 WORKDIR /TEXTTOBINARYJAVAMAVEN
 
 # Copy the application jar and its dependencies to the container
-COPY target/classes/org/example/TextToBinary.class .
+COPY target/classes/org/example/TextToBinary.jar .
 #COPY target/lib lib
 
 # Set environment variables
