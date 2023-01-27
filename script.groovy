@@ -8,9 +8,9 @@ def buildJar() {
 def buildImage() {
     echo "building the docker image..."
     withCredentials([usernamePassword(credentialsId: 'new-docker-hub-repo', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-        sh 'docker build -t zerqqaoui/text_to_binary_java_maven:jma-1.0 .'
+        sh 'docker build -t zerqqaoui/text_to_binary_java_maven:jma-1.1 .'
         sh "echo $PASS | docker login -u $USER --password-stdin"
-        sh 'docker push zerqqaoui/text_to_binary_java_maven:jma-1.0'
+        sh 'docker push zerqqaoui/text_to_binary_java_maven:jma-1.1'
     }
 } 
 
