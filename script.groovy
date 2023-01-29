@@ -1,6 +1,6 @@
 def buildJar() {
     echo "building the application..."
-    sh 'mvn clean'
+    //sh 'mvn clean'
     sh 'mvn compile'
     sh 'mvn test'
     sh 'mvn package'
